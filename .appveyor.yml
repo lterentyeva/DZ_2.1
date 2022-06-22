@@ -4,13 +4,13 @@ stack: jdk 11
 
 branches:
   only:
-    - main
+    - master
 
 build: off
 
 install:
-  - java -jar ./artifacts/app-order.jar &cd
+  - java -jar ./artifacts/app-order.jar &
 
 build_script:
   - chmod +x gradlew
-  - ./gradlew test -Dselenide.headless=true
+  - ./gradlew test --info -Dselenide.headless=true
